@@ -27,7 +27,7 @@ NOTE: [`epaint`](epaint/CHANGELOG.md), [`eframe`](eframe/CHANGELOG.md), [`egui_w
 * Added `ui.data()`, `ctx.data()`, `ctx.options()` and `ctx.tessellation_options()` ([#1175](https://github.com/emilk/egui/pull/1175)).
 * Added `Response::on_hover_text_at_pointer` as a convenience akin to `Response::on_hover_text` ([1179](https://github.com/emilk/egui/pull/1179)).
 * Added `ui.weak(text)`.
-* Added `Context::move_to_top` and `Context::top_most_layer` for managing the layer on the top ([#1242](https://github.com/emilk/egui/pull/1242)).
+* Added `Context::move_to_top`, `Context::top_most_layer` and `Context::top_most_layer_in` for managing the layer on the top ([#1242](https://github.com/emilk/egui/pull/1242)).
 * Added `Slider::step_by` ([1225](https://github.com/emilk/egui/pull/1225)).
 * Added ability to scroll an UI into view without specifying an alignment ([1247](https://github.com/emilk/egui/pull/1247)).
 * Added `Ui::scroll_to_rect` ([1252](https://github.com/emilk/egui/pull/1252)).

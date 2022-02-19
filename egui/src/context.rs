@@ -895,6 +895,11 @@ impl Context {
         self.memory().top_most_layer()
     }
 
+    /// The overall top-most layer in the given `order`.
+    pub fn top_most_layer_in(&self, order: Order) -> Option<LayerId> {
+        self.memory().top_most_layer_in(order)
+    }
+
     /// Moves the given area to the top.
     pub fn move_to_top(&self, layer_id: LayerId) {
         self.memory().areas.move_to_top(layer_id);

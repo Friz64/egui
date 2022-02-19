@@ -1,6 +1,6 @@
 use epaint::ahash::AHashSet;
 
-use crate::{area, window, Id, IdMap, InputState, LayerId, Pos2, Rect, Style};
+use crate::{area, window, Id, IdMap, InputState, LayerId, Order, Pos2, Rect, Style};
 
 // ----------------------------------------------------------------------------
 
@@ -333,6 +333,16 @@ impl Memory {
     /// with, it is moved above all other areas.
     pub fn top_most_layer(&self) -> Option<LayerId> {
         self.areas.order().last().copied()
+    }
+
+    /// The overall top-most layer in the given `order`.
+    pub fn top_most_layer_in(&self, order: Order) -> Option<LayerId> {
+        self.areas
+            .order()
+            .iter()
+            .rev()
+            .find(|layer| layer.order == order)
+            .copied()
     }
 
     pub(crate) fn had_focus_last_frame(&self, id: Id) -> bool {
